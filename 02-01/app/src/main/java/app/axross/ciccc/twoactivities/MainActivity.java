@@ -9,13 +9,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private static String LOG_TAG = MainActivity.class.getSimpleName();
-
     public static final String EXTRA_MESSAGE =
             "app.axross.ciccc.twoactivities.extra.MESSAGE";
-
     public static final int TEXT_REQUEST = 1;
-
+    private static String LOG_TAG = MainActivity.class.getSimpleName();
     private TextView mReplyHeadTextView;
     private TextView mReplyTextView;
     private EditText mMessageEditText;
