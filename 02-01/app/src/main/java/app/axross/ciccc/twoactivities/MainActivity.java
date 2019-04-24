@@ -11,6 +11,8 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE =
             "app.axross.ciccc.twoactivities.extra.MESSAGE";
+    public static final String EXTRA_PASSAGE =
+            "app.axross.ciccc.twoactivities.extra.PASSAGE";
     public static final int TEXT_REQUEST = 1;
     private static String LOG_TAG = MainActivity.class.getSimpleName();
     private TextView mReplyHeadTextView;
@@ -52,5 +54,23 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE, message);
 
         startActivityForResult(intent, TEXT_REQUEST);
+    }
+
+    public void onClickAnyPassageButton(View view) {
+        Intent intent = new Intent(this, PassageActivity.class);
+
+        switch(view.getId()) {
+            case R.id.button_one:
+                intent.putExtra(EXTRA_PASSAGE, 0);
+                break;
+            case R.id.button_two:
+                intent.putExtra(EXTRA_PASSAGE, 1);
+                break;
+            case R.id.button_three:
+                intent.putExtra(EXTRA_PASSAGE, 2);
+                break;
+        }
+
+        startActivity(intent);
     }
 }
