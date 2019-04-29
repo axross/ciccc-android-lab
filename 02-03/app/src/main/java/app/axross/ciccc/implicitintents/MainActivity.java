@@ -36,7 +36,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onLocationButtonClick(View view) {
+        String location = locationEditText.getText().toString();
+        Uri url = Uri.parse("geo:0,0?q=" + location);
+        Intent intent = new Intent(Intent.ACTION_VIEW, url);
 
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Log.d("ImplicitIntents", "Can't handle this intent!");
+        }
     }
 
     public void onShareButtonClick(View view) {
