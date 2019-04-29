@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="movie_names">
+        <item>Catch Me If You Can</item>
+        <item>Fight Club</item>
+        <item>Forrest Gamp</item>
+        <item>Good Will Hunting</item>
+        <item>Pulp Fiction</item>
+        <item>The God Father</item>
+        <item>The Hangover</item>
+        <item>The Shaw Shank Redemption</item>
+        <item>Titanic</item>
+    </array>
+
+    <array name="movie_summaries">
+        <item>Catch Me If You Can is a 2002 American biographical crime film directed and co-produced by Steven Spielberg from a screenplay by Jeff Nathanson. The film is based on the life of Frank Abagnale, who, before his 19th birthday, successfully performed cons worth millions of dollars by posing as a Pan American World Airways pilot, a Georgia doctor and a Louisiana parish prosecutor. His primary crime was check fraud; he became so experienced that the FBI eventually turned to him for help in catching other checking forgers. The film stars Leonardo DiCaprio and Tom Hanks, with Christopher Walken, Martin Sheen, and Nathalie Baye in supporting roles.</item>
+        <item>Fight Club is a 1999 film based on the 1996 novel of the same name by Chuck Palahniuk. The film was directed by David Fincher, and stars Brad Pitt, Edward Norton, and Helena Bonham Carter. Norton plays the unnamed protagonist, referred to as the narrator, who is discontented with his white-collar job. He forms a "fight club" with soap maker Tyler Durden, played by Pitt, and they are joined by men who also want to fight recreationally. The narrator becomes embroiled in a relationship with Durden and a dissolute woman, Marla Singer, played by Bonham Carter.</item>
+        <item>Forrest Gump is a 1994 American drama film based on the 1986 novel of the same name by Winston Groom. The film was directed by Robert Zemeckis and stars Tom Hanks, Robin Wright, Gary Sinise, Mykelti Williamson, and Sally Field. The story depicts several decades in the life of its titular character (Hanks), a slow-witted but kind-hearted, good-natured and athletically prodigious man from Alabama. Gump witnesses, and in some cases influences, some of the defining events of the latter half of the 20th century in the United States, specifically the period between his birth in 1944 and 1982. The film differs substantially from Winston Groom\'s novel, including Gump\'s personality and several events that were depicted.</item>
+        <item>Good Will Hunting is a 1997 American drama film, directed by Gus Van Sant, and starring Robin Williams, Matt Damon, Ben Affleck, Minnie Driver and Stellan Skarsgård. Written by Affleck and Damon (and with Damon in the title role), the film follows 20-year-old South Boston laborer Will Hunting, an unrecognized genius who, as part of a deferred prosecution agreement after assaulting a police officer, becomes a client of a therapist and studies advanced mathematics with a renowned professor. Through his therapy sessions, Will re-evaluates his relationships with his best friend, his girlfriend and himself, facing the significant task of confronting his past and thinking about his future.</item>
+        <item>Pulp Fiction is a 1994 American crime film written and directed by Quentin Tarantino, based on a story by Tarantino and Roger Avary,[4] and starring John Travolta, Samuel L. Jackson, Bruce Willis, Ving Rhames, and Uma Thurman. The film tells a few stories of criminal Los Angeles. The film\'s title refers to the pulp magazines and hardboiled crime novels popular during the mid-20th century, known for their graphic violence and punchy dialogue.</item>
+        <item>The Godfather is a 1972 American crime film directed by Francis Ford Coppola and produced by Albert S. Ruddy, based on Mario Puzo\'s best-selling eponymous novel. It stars Marlon Brando and Al Pacino as the leaders of a fictional New York crime family. The story, spanning 1945 to 1955, chronicles the family under the patriarch Vito Corleone (Brando), focusing on the transformation of Michael Corleone (Pacino) from reluctant family outsider to ruthless mafia boss.</item>
+        <item>The Hangover is a 2009 American comedy film directed by Todd Phillips, co-produced with Daniel Goldberg, and written by Jon Lucas and Scott Moore. It is the first installment in The Hangover trilogy. The film stars Bradley Cooper, Ed Helms, Zach Galifianakis, Heather Graham, Justin Bartha, and Jeffrey Tambor. It tells the story of Phil Wenneck, Stu Price, Alan Garner, and Doug Billings, who travel to Las Vegas for a bachelor party to celebrate Doug\'s impending marriage. However, Phil, Stu, and Alan wake up with Doug missing and no memory of the previous night\'s events, and must find the groom before the wedding can take place.</item>
+        <item>The Shawshank Redemption is a 1994 American drama film written and directed by Frank Darabont, based on the 1982 Stephen King novella Rita Hayworth and Shawshank Redemption. It tells the story of banker Andy Dufresne (Tim Robbins), who is sentenced to life in Shawshank State Penitentiary for the murder of his wife and her lover, despite his claims of innocence. Over the following two decades, he befriends a fellow prisoner, contraband smuggler Ellis "Red" Redding (Morgan Freeman), and becomes instrumental in a money laundering operation led by the prison warden Samuel Norton (Bob Gunton). William Sadler, Clancy Brown, Gil Bellows, and James Whitmore appear in supporting roles.</item>
+        <item>Titanic is a 1997 American epic romance-disaster film directed, written, co-produced and co-edited by James Cameron. A fictionalized account of the sinking of the RMS Titanic, it stars Leonardo DiCaprio and Kate Winslet as members of different social classes who fall in love aboard the ship during its ill-fated maiden voyage.</item>
+    </array>
+
+    <array name="movie_posters">
+        <item>@drawable/poster_catch_me_if_you_can</item>
+        <item>@drawable/poster_flight_club</item>
+        <item>@drawable/poster_forrest_gump</item>
+        <item>@drawable/poster_good_will_hunting</item>
+        <item>@drawable/poster_pulp_fiction</item>
+        <item>@drawable/poster_the_god_father</item>
+        <item>@drawable/poster_the_hangover</item>
+        <item>@drawable/poster_the_shaw_shank_redemption</item>
+        <item>@drawable/poster_titanic</item>
+    </array>
+</resources>
