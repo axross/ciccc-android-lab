@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="product_names">
+        <item>Cheese</item>
+        <item>Rice</item>
+        <item>Apple</item>
+    </array>
+
+    <integer-array name="product_prices">
+        <item>17</item>
+        <item>3</item>
+        <item>1</item>
+    </integer-array>
+</resources>
