@@ -1,7 +1,6 @@
 package app.axross.ciccc.twoactivities;
 
 import android.content.Intent;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -142,6 +141,12 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra(EXTRA_PASSAGE, 2);
                 break;
         }
+
+        startActivity(intent);
+    }
+
+    public void onClickShoppingButton(View view) {
+        Intent intent = new Intent(this, ShoppingMainActivity.class);
 
         startActivity(intent);
     }

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PassageActivity"></activity>
+        <activity android:name=".ShoppingMainActivity"></activity>
+        <activity android:name=".PassageActivity" />
         <activity
             android:name=".SecondActivity"
             android:label="Second Activity"
