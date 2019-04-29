@@ -2,6 +2,7 @@ package app.axross.ciccc.implicitintents;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -48,5 +49,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onShareButtonClick(View view) {
+        String text = shareEditText.getText().toString();
+        String mimeType = "text/plain";
+
+        ShareCompat.IntentBuilder
+                .from(this)
+                .setType(mimeType)
+                .setChooserTitle("Share this text with: ")
+                .setText(text)
+                .startChooser();
     }
 }
