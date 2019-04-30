@@ -20,11 +20,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialize the calculator class and all the views
         calculator = new Calculator();
+
         resultTextView = findViewById(R.id.operation_result_text_view);
         operandOneEditText = findViewById(R.id.operand_one_edit_text);
         operandTwoEditText = findViewById(R.id.operand_two_edit_text);
+
+        operandOneEditText.setOnFocusChangeListener(new OnOperandFocusChangeListener());
+        operandTwoEditText.setOnFocusChangeListener(new OnOperandFocusChangeListener());
+
+        operandOneEditText.setText("0");
+        operandTwoEditText.setText("0");
     }
 
     public void onClickAdd(View view) {
@@ -83,6 +89,20 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         resultTextView.setText(result);
+    }
+
+    private class OnOperandFocusChangeListener implements View.OnFocusChangeListener {
+        public void onFocusChange(View view, boolean hasFocus) {
+            EditText editText = (EditText) view;
+
+            if (!hasFocus) {
+                try {
+                    getOperand(editText);
+                } catch (NumberFormatException nfe) {
+                    editText.setText("0");
+                }
+            }
+        }
     }
 
     private static Double getOperand(EditText operandEditText) {
