@@ -32,7 +32,6 @@
             android:id="@+id/operation_add_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickAdd"
             android:text="@string/add_operation_text"/>
 
         <Button
@@ -41,7 +40,6 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/operation_add_btn"
             android:layout_toRightOf="@id/operation_add_btn"
-            android:onClick="onClickSub"
             android:text="@string/sub_operation_text"/>
 
         <Button
@@ -49,7 +47,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/operation_add_btn"
-            android:onClick="onClickDiv"
             android:text="@string/div_operation_text"/>
 
         <Button
@@ -59,7 +56,6 @@
             android:layout_below="@id/operation_add_btn"
             android:layout_toEndOf="@id/operation_add_btn"
             android:layout_toRightOf="@id/operation_add_btn"
-            android:onClick="onClickMul"
             android:text="@string/mul_operation_text"/>
 
     </RelativeLayout>

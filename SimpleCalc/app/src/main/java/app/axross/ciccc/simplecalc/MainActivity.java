@@ -2,6 +2,8 @@ package app.axross.ciccc.simplecalc;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -26,91 +28,40 @@ public class MainActivity extends AppCompatActivity {
         operandOneEditText = findViewById(R.id.operand_one_edit_text);
         operandTwoEditText = findViewById(R.id.operand_two_edit_text);
 
-        operandOneEditText.setOnFocusChangeListener(new OnOperandFocusChangeListener());
-        operandTwoEditText.setOnFocusChangeListener(new OnOperandFocusChangeListener());
-
-        operandOneEditText.setText("0");
-        operandTwoEditText.setText("0");
-    }
-
-    public void onClickAdd(View view) {
-        compute(Calculator.Operator.ADD);
-    }
-
-    public void onClickSub(View view) {
-        compute(Calculator.Operator.SUB);
-    }
-
-    public void onClickDiv(View view) {
-        try {
-            compute(Calculator.Operator.DIV);
-        } catch (IllegalArgumentException iae) {
-            Log.e(TAG, "IllegalArgumentException", iae);
-            resultTextView.setText(getString(R.string.computation_error));
-        }
-    }
-
-    public void onClickMul(View view) {
-        compute(Calculator.Operator.MUL);
+        findViewById(R.id.operation_add_btn).setOnClickListener((View view) -> compute(Calculator.Operator.ADD));
+        findViewById(R.id.operation_sub_btn).setOnClickListener((View view) -> compute(Calculator.Operator.SUB));
+        findViewById(R.id.operation_div_btn).setOnClickListener((View view) -> compute(Calculator.Operator.DIV));
+        findViewById(R.id.operation_mul_btn).setOnClickListener((View view) -> compute(Calculator.Operator.MUL));
     }
 
     private void compute(Calculator.Operator operator) {
         double operandOne;
         double operandTwo;
+
         try {
             operandOne = getOperand(operandOneEditText);
             operandTwo = getOperand(operandTwoEditText);
         } catch (NumberFormatException nfe) {
             Log.e(TAG, "NumberFormatException", nfe);
+
             resultTextView.setText(getString(R.string.computation_error));
+
             return;
         }
 
-        String result;
-        switch (operator) {
-            case ADD:
-                result = String.valueOf(
-                        calculator.add(operandOne, operandTwo));
-                break;
-            case SUB:
-                result = String.valueOf(
-                        calculator.sub(operandOne, operandTwo));
-                break;
-            case DIV:
-                result = String.valueOf(
-                        calculator.div(operandOne, operandTwo));
-                break;
-            case MUL:
-                result = String.valueOf(
-                        calculator.mul(operandOne, operandTwo));
-                break;
-            default:
-                result = getString(R.string.computation_error);
-                break;
-        }
-        resultTextView.setText(result);
-    }
+        try {
+            double result = calculator.calculate(operandOne, operandTwo, operator);
 
-    private class OnOperandFocusChangeListener implements View.OnFocusChangeListener {
-        public void onFocusChange(View view, boolean hasFocus) {
-            EditText editText = (EditText) view;
-
-            if (!hasFocus) {
-                try {
-                    getOperand(editText);
-                } catch (NumberFormatException nfe) {
-                    editText.setText("0");
-                }
-            }
+            resultTextView.setText(String.valueOf(result));
+        } catch (Calculator.CalculationException exception) {
+            resultTextView.setText("Calculation Error");
         }
+
     }
 
     private static Double getOperand(EditText operandEditText) {
-        String operandText = getOperandText(operandEditText);
-        return Double.valueOf(operandText);
-    }
+        String operandText = operandEditText.getText().toString();
 
-    private static String getOperandText(EditText operandEditText) {
-        return operandEditText.getText().toString();
+        return operandText.length() == 0 ? 0d :Double.valueOf(operandText);
     }
 }
