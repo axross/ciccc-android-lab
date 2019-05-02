@@ -72,16 +72,14 @@ public class CalculatorTest {
     }
 
     @Test
-    public void divTwoNumbers() {
-        double resultDiv = calculator.div(32d,2d);
+    public void divTwoNumbers() throws Calculator.CalculationException {
+        double resultDiv = calculator.div(32d, 2d);
 
         assertThat(resultDiv, is(equalTo(16d)));
     }
 
-    @Test
-    public void divTwoNumbersZero() {
-        double resultDiv = calculator.div(32d,0);
-
-        assertThat(resultDiv, is(equalTo(Double.POSITIVE_INFINITY)));
+    @Test(expected = Calculator.CalculationException.class)
+    public void divByZeroThrows() throws Calculator.CalculationException {
+        calculator.div(32d, 0);
     }
 }

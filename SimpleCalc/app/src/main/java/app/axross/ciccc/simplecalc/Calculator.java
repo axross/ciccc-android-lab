@@ -24,7 +24,11 @@ class Calculator {
         return firstOperand - secondOperand;
     }
 
-    public double div(double firstOperand, double secondOperand) {
+    public double div(double firstOperand, double secondOperand) throws CalculationException {
+        if (secondOperand == 0) {
+            throw new CalculationException(firstOperand, secondOperand, "firstOperand is tried dividing by zero");
+        }
+
         return firstOperand / secondOperand;
     }
 
